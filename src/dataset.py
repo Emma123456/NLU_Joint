@@ -64,10 +64,10 @@ class PadBatchSeq:
 
 if __name__ == '__main__':
     from transformers import BertTokenizer
-    bert_path = '/home/data/tmp/bert-base-chinese'
-    data_file = '/home/data/tmp/NLP_Course/Joint_NLU/data/train.tsv'
-    cls_vocab_file = '/home/data/tmp/NLP_Course/Joint_NLU/data/cls_vocab'
-    slot_vocab_file = '/home/data/tmp/NLP_Course/Joint_NLU/data/slot_vocab'
+    bert_path = '../bert'
+    data_file = '../data/train.tsv'
+    cls_vocab_file = '../data/cls_vocab'
+    slot_vocab_file = '../data/slot_vocab'
     with open(cls_vocab_file) as f:
         res = [i.strip() for i in f.readlines() if len(i.strip()) != 0]
     cls_vocab = dict(zip(res, range(len(res))))

@@ -18,3 +18,4 @@ The data from the SMP2019 task is provided in the folder `data`.
 
 ## TODO
 - Implement CRF layer. Code from this [repo](https://github.com/monologg/JointBERT/issues) can be referred to add the CRF layer.
+- 调整intent loss 和 slot loss的比例

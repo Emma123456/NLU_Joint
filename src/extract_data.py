@@ -2,11 +2,11 @@ import os
 import json
 import random
 
-in_file = '/home/data/tmp/NLP_Course/Joint_NLU/data/train.json'
-out_train_file = '/home/data/tmp/NLP_Course/Joint_NLU/data/train.tsv'
-out_test_file = '/home/data/tmp/NLP_Course/Joint_NLU/data/test.tsv'
-cls_vocab_file = '/home/data/tmp/NLP_Course/Joint_NLU/data/cls_vocab'
-slot_vocab_file = '/home/data/tmp/NLP_Course/Joint_NLU/data/slot_vocab'
+in_file = '../data/train.json'
+out_train_file = '../data/train.tsv'
+out_test_file = '../data/test.tsv'
+cls_vocab_file = '../data/cls_vocab'
+slot_vocab_file = '../data/slot_vocab'
 
 with open(in_file) as f:
     data = json.load(f)
