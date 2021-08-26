@@ -1,0 +1,579 @@
+flight@query	汕头到重庆的航班	b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+epg@query	今天什么好看电影？	b-datetime_date i-datetime_date o o o o b-category i-category o
+train@query	广州到孝感的火车	b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+cookbook@query	人造鸡蛋的配方。	b-dishname i-dishname i-dishname i-dishname o o o o
+video@query	薛平贵与王宝钏	b-name i-name i-name i-name i-name i-name i-name
+telephone@dial	给木九超打电话	o b-name i-name i-name o o o
+news@play	帮我查一查今天的新闻。	o o o o o b-datetime_date i-datetime_date o o o o
+app@query	帮我找菜单	o o o b-name i-name
+news@play	昨天的北京新闻	b-datetime_date i-datetime_date o b-location_city i-location_city o o
+telephone@dial	呼叫浦蒲	o o b-name i-name
+poetry@query	搜索兰陵王。	o o b-name i-name i-name o
+flight@query	明天长沙到上海的航班	b-startdate_date i-startdate_date b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+tvchannel@play	搜索第10频道	o o o b-code i-code o o
+video@query	能不能看当前的中超联赛	o o o o o o o b-name i-name i-name i-name
+tvchannel@play	我看呀中央五台	o o o b-name i-name i-name i-name
+poetry@default	你好啊，再背首诗。	o o o o o o o o o
+cookbook@query	酸菜鱼怎样做	b-dishname i-dishname i-dishname o o o
+health@query	怎么治疗牛皮癣	o o o o b-keyword i-keyword i-keyword
+video@query	我想看爱在春天	o o o b-name i-name i-name i-name
+riddle@query	讲一个谜语，啊，你，哦。	o o o b-category i-category o o o o o o o
+translation@translation	翻译我今天要去打网球	o o b-content i-content i-content i-content i-content i-content i-content i-content
+news@play	总计今天的新闻。	o o b-datetime_date i-datetime_date o o o o
+map@position	合肥的大润发在哪	b-location_city i-location_city o b-location_poi i-location_poi i-location_poi o o
+news@play	什么新闻呢	o o o o o
+cookbook@query	牛肉怎么煮才好吃？你？	b-ingredient i-ingredient o o o o o o o o o
+message@send	给胡克发短信	o b-name i-name o o o
+epg@query	中央一套昨天的新闻联播	b-tvchannel i-tvchannel i-tvchannel i-tvchannel b-datetime_date i-datetime_date o b-name i-name i-name i-name
+website@open	上百度网站	o b-name i-name o o
+cookbook@query	卤猪蹄怎么做？	b-dishname i-dishname i-dishname o o o o
+cookbook@query	保险，酸辣土豆丝怎么炒？	o o o b-dishname i-dishname i-dishname i-dishname i-dishname o o o o
+poetry@query	唐诗登高。	b-dynasty o b-name i-name o
+health@query	如何治疗龟头炎。	o o o o b-keyword i-keyword i-keyword o
+lottery@number_query	查看七乐彩的得奖号码	o o b-name i-name i-name o o o o o
+website@open	打开索尼官方网站	o o b-name i-name o o o o
+message@sendcontacts	把莫若的电话号码发送给反面教材	o b-name i-name o o o o o o o o b-receiver i-receiver i-receiver i-receiver
+cookbook@query	福寿鱼做法。	b-ingredient i-ingredient i-ingredient o o o
+website@open	开启雅虎	o o b-name i-name
+poetry@query	牧童骑黄牛的下一句是什么？	b-keyword i-keyword i-keyword i-keyword i-keyword o b-queryfield i-queryfield i-queryfield o o o o
+video@query	天机富春山居图	b-name i-name i-name i-name i-name i-name i-name
+cookbook@query	葱爆羊肉的做法。	b-dishname i-dishname i-dishname i-dishname o o o o
+epg@query	中央电视台一套现在放什么节目？	b-tvchannel i-tvchannel i-tvchannel i-tvchannel i-tvchannel i-tvchannel i-tvchannel b-datetime_time i-datetime_time o o o o o o
+message@send	给靖哥哥发短信说我不回来吃饭了	o b-name i-name i-name o o o o b-content i-content i-content i-content i-content i-content i-content
+email@forward	我想转发这封邮件	o o o o o o o o
+video@query	小兵张嘎电影儿	b-name i-name i-name i-name b-category i-category o
+video@query	美国热门的恐怖电影	b-area i-area b-popularity i-popularity o b-tag i-tag b-category i-category
+tvchannel@play	调到新疆综艺	o o b-name i-name i-name i-name
+health@query	发烧好吗？	b-keyword i-keyword o o o
+lottery@number_query	本期七星彩的中奖号码是多少？	o o b-name i-name i-name o o o o o o o o o
+telephone@dial	给吴方婷打电话	o b-name i-name i-name o o o
+cookbook@query	胖鱼头怎么烧？	b-ingredient i-ingredient i-ingredient o o o o
+message@send	给杨凯发短信	o b-name i-name o o o
+flight@query	查一下济南到成都的航班	o o o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+cookbook@query	做红烧肉。	o b-dishname i-dishname i-dishname o
+telephone@dial	打电话给魏文强	o o o o b-name i-name i-name
+music@play	放首陈奕迅的十年	o o b-artist i-artist i-artist o b-song i-song
+match@query	昨天恒大比赛结果是什么？	b-datetime_date i-datetime_date b-name i-name o o b-type i-type o o o o
+poetry@query	背诵一首唐诗	o o o o b-dynasty o
+map@route	玉照公园怎么走	b-endloc_poi i-endloc_poi i-endloc_poi i-endloc_poi o o o
+cookbook@query	肉肉怎么腌制？	b-ingredient i-ingredient o o o o o
+cookbook@query	帮我找出红烧肉的做法。	o o o o b-dishname i-dishname i-dishname o o o o
+cookbook@query	怎么煮面才好吃呢？	o o b-dishname i-dishname o o o o o
+music@play	放首歌给我听吧	o o o o o o o
+cookbook@query	拔丝芋头怎么做	b-dishname i-dishname i-dishname i-dishname o o o
+email@send	发邮件给莹莹说我好困我想睡觉	o o o o b-name i-name o b-content i-content i-content i-content i-content i-content i-content
+epg@query	贵州卫视今晚看什么电视剧？	b-tvchannel i-tvchannel i-tvchannel i-tvchannel b-datetime_time i-datetime_time o o o b-category i-category i-category o
+translation@translation	翻译我想去远方	o o b-content i-content i-content i-content i-content
+app@launch	打开天天动听播放站你名下	o o b-name i-name i-name i-name o o o o o o
+health@query	我是个女的，你知道怎样治脱发吗	o o o o o o o o o o o o b-keyword i-keyword o
+match@query	中超比赛。	b-category i-category o o o
+health@query	怎么治感冒？	o o o b-keyword i-keyword o
+cookbook@query	紫菜蛋花汤。	b-dishname i-dishname i-dishname i-dishname i-dishname o
+cookbook@query	水饺的做法。	b-dishname i-dishname o o o o
+poetry@query	李白的静夜思怎么读？	b-author i-author o b-name i-name i-name o o o o
+tvchannel@play	打开珠江台	o o b-name i-name i-name
+music@play	我想听期待这首歌	o o o b-song i-song o o o
+video@query	铁甲钢拳	b-name i-name i-name i-name
+riddle@query	帮忙讲几个谜语给我猜。	o o o o o b-category i-category o o o o
+train@query	明天去滁州的火车	b-startdate_date i-startdate_date o b-endloc_city i-endloc_city o o o
+epg@query	现在中央一台在播什么节目？	b-datetime_time i-datetime_time b-tvchannel i-tvchannel i-tvchannel i-tvchannel o o o o o o o
+website@open	帮我链接到新浪网	o o o o o b-name i-name i-name
+poetry@default	帮我找首诗。	o o o o o o
+app@query	搜索声控安卓软件	o o b-name i-name i-name i-name o o
+news@play	钓鱼岛新闻	b-keyword i-keyword i-keyword o o
+music@play	唱一首简单爱	o o o b-song i-song i-song
+train@query	郑州到许昌的火车	b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+music@play	我想听音乐忘情水。	o o o o o b-song i-song i-song o
+app@download	下载汉化软件	o o b-name i-name o o
+poetry@default	呵呵，背首诗来听。	o o o o o o o o o
+map@route	我想到科大讯飞怎么走	o o o b-endloc_poi i-endloc_poi i-endloc_poi i-endloc_poi o o o
+app@query	搜索游戏	o o b-name i-name
+poetry@query	背一首春晓	o o o b-name i-name
+poetry@query	给我背个李白的诗。	o o o o b-author i-author o o o
+tvchannel@play	帮我切换到湖南卫视	o o o o o b-name i-name i-name i-name
+map@route	去深圳怎么坐车？	o b-endloc_city i-endloc_city o o o o o
+map@position	六安市飞云卫生院在哪里	b-location_city i-location_city i-location_city b-location_poi i-location_poi i-location_poi i-location_poi i-location_poi o o o
+app@launch	金山词霸	b-name i-name i-name i-name
+cookbook@query	给我讲个笑话吧，鱼香肉丝怎么做？	o o o o o o o o b-dishname i-dishname i-dishname i-dishname o o o o
+cookbook@query	鱼香肉丝哦	b-dishname i-dishname i-dishname i-dishname o
+match@query	中超比赛时间多少啊？	b-category i-category o o o o o o o o
+news@play	关注一下今天的欧洲杯新闻	o o o o b-datetime_date i-datetime_date o b-keyword i-keyword i-keyword o o
+flight@query	八月十号从重庆到武汉的航班	b-startdate_date i-startdate_date i-startdate_date i-startdate_date o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+cookbook@query	干锅排骨怎么做？	b-dishname i-dishname i-dishname i-dishname o o o o
+riddle@query	让我猜个谜语。	o o o o b-category i-category o
+news@play	我要看新闻玩不？	o o o o o o o o
+cookbook@query	烤鸭，啊！	b-dishname i-dishname o o o
+epg@query	给我看看什么时候有播盛夏晚晴天	o o o o o o o o o o b-name i-name i-name i-name i-name
+website@open	把淘宝网打开	o b-name i-name i-name o o
+cookbook@query	扬州炒饭	b-dishname i-dishname i-dishname i-dishname
+flight@query	帮我查一下从济南到福州的机票	o o o o o o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+cookbook@query	怎么做？酸菜鱼？	o o o o b-dishname i-dishname i-dishname o
+health@query	肾炎需要注意什么？	b-keyword i-keyword o o o o o o o
+message@send	发送短消息	o o o o o
+message@send	发短信给贤想快点给我送早饭开门我饿死了	o o o o b-name b-content i-content i-content i-content i-content i-content i-content i-content i-content i-content i-content i-content i-content i-content
+stock@query	查询中国石化的股价	o o b-name i-name i-name i-name o o o
+news@play	帮我搜索一下今天的新闻	o o o o o o b-datetime_date i-datetime_date o o o
+message@send	发短信给王勋连说我很好	o o o o b-name i-name i-name o b-content i-content i-content
+cinemas@query	现在电影院有什么好电影？	b-datetime_time i-datetime_time o o o o o o o o o o
+epg@query	四川卫视频道的节目单	b-tvchannel i-tvchannel i-tvchannel i-tvchannel o o o o o o
+poetry@query	朗诵李白的静夜思。	o o b-author i-author o b-name i-name i-name o
+tvchannel@play	高清北京文艺台	b-resolution i-resolution b-name i-name i-name i-name i-name
+match@query	中超的比赛预告。	b-category i-category o o o b-type i-type o
+health@query	高血压怎么办吧	b-keyword i-keyword i-keyword o o o o
+cookbook@query	土豆丝是怎么炒？	b-dishname i-dishname i-dishname o o o o o
+cookbook@query	糖醋里脊啊，啊	b-dishname i-dishname i-dishname i-dishname o o o
+translation@translation	电焊机用英语怎么说	b-content i-content i-content o b-target i-target o o o
+cookbook@query	慕斯的做法。	b-ingredient i-ingredient o o o o
+radio@launch	麻烦您能否帮我调频97.1汉中音乐广播电台	o o o o o o o o o b-code i-code i-code i-code b-name i-name i-name i-name i-name i-name i-name i-name
+epg@query	湖南卫视节目录	b-tvchannel i-tvchannel i-tvchannel i-tvchannel o o o
+video@query	播放神话	o o b-name i-name
+cookbook@query	鱼香肉丝，怎么炒？	b-dishname i-dishname i-dishname i-dishname o o o o o
+poetry@query	嗯，你来一首李白的诗词，的。	o o o o o o b-author i-author o o o o o o
+health@query	失明了怎么办？	b-keyword i-keyword o o o o o
+health@query	淋病怎么治？	b-keyword i-keyword o o o o
+cookbook@query	脆瓜。	b-dishname i-dishname o
+app@launch	打开uc浏览器	o o b-name i-name i-name i-name i-name
+stock@query	科大讯飞股票价格	b-name i-name i-name i-name o o o o
+epg@query	现在电视台在放什么节目	b-datetime_time i-datetime_time o o o o o o o b-category i-category
+translation@translation	我去飞机场英语怎么说	b-content i-content i-content i-content i-content b-target i-target o o o
+epg@query	我想看中央六台的电影。	o o o b-tvchannel i-tvchannel i-tvchannel i-tvchannel o b-category i-category o
+message@sendcontacts	把高建清的号码发给潘青华	o b-name i-name i-name o o o o o b-receiver i-receiver i-receiver
+cookbook@query	酱牛肉怎么做	b-dishname i-dishname i-dishname o o o
+message@sendcontacts	把李文鼎的号码发给谢服全	o b-name i-name i-name o o o o o b-receiver i-receiver i-receiver
+stock@query	通宝能源股票	b-name i-name i-name i-name o o
+cookbook@query	银耳莲子粥怎么做	b-dishname i-dishname i-dishname i-dishname i-dishname o o o
+video@query	猫眼三姐妹	b-name i-name i-name i-name i-name
+translation@translation	福尔摩探案急翻译成英文	b-content i-content i-content i-content i-content i-content o o o b-target i-target
+tvchannel@play	我要看湖南台	o o o b-name i-name i-name
+epg@query	蒽蒽江苏卫视有什么好节目吗？	o o b-tvchannel i-tvchannel i-tvchannel i-tvchannel o o o o o o o o
+poetry@query	背首宋词。	o o b-dynasty o o
+app@launch	酷狗音乐盒	b-name i-name i-name i-name i-name
+epg@query	帮我查找一下今天晚上有什么电视节目？	o o o o o o b-datetime_date i-datetime_date b-datetime_time i-datetime_time o o o o o b-category i-category o
+cookbook@query	请问意大利面怎么做	o o b-dishname i-dishname i-dishname i-dishname o o o
+video@query	我要看功夫熊猫帮我播放出来	o o o b-name i-name i-name i-name o o o o o o
+cookbook@query	海参怎么做？	b-ingredient i-ingredient o o o o
+tvchannel@play	高清中央电视台电影频道	b-resolution i-resolution b-name i-name i-name i-name i-name i-name i-name i-name i-name
+message@send	帮我发条短信吧	o o o o o o o
+message@sendcontacts	把王建春的电话号码发给张学政	o b-name i-name i-name o o o o o o o b-receiver i-receiver i-receiver
+cookbook@query	鸡蛋怎么炒最好吃？	b-ingredient i-ingredient o o o o o o o
+epg@query	找找非诚勿扰什么时候结束	o o b-name i-name i-name i-name o o o o o o
+translation@translation	翻译共产党员	o o b-content i-content i-content i-content
+cookbook@query	请问鱼块的做法。	o o b-ingredient i-ingredient o o o o
+cookbook@query	怎么样？做红烧肉。	o o o o o b-dishname i-dishname i-dishname o
+map@route	带我去新都会	o o o b-endloc_poi i-endloc_poi i-endloc_poi
+cookbook@query	猪肉丸子汤怎么做啊？	b-dishname i-dishname i-dishname i-dishname i-dishname o o o o o
+video@query	抬头见喜	b-name i-name i-name i-name
+novel@query	网上最火的小说有哪些	o o b-popularity i-popularity o o o o o o
+cookbook@query	帮我找一下凉拌海蜇的做法。	o o o o o b-dishname i-dishname i-dishname i-dishname o o o o
+lottery@number_query	搜索七乐彩的公示号码	o o b-name i-name i-name o o o o o
+poetry@query	杜甫的诗。	b-author i-author o o o
+app@query	搜索结束软件	o o b-name i-name o o
+news@play	艾莱冈给我点新闻。	o o o o o o o o o
+app@launch	他开酷狗	o o b-name i-name
+health@query	手癣怎么治疗？	b-keyword i-keyword o o o o o
+cookbook@query	怎么做番茄汤	o o o b-dishname i-dishname i-dishname
+telephone@dial	打电话给王大头	o o o o b-name i-name i-name
+message@sendcontacts	把刘荣涛的电话发给王华成	o b-name i-name i-name o o o o o b-receiver i-receiver i-receiver
+cookbook@query	鸡怎么烧	b-ingredient o o o
+music@play	想听牵手这首歌	o o b-song i-song o o o
+telephone@dial	打电话麦亚伦	o o o b-name i-name i-name
+telephone@dial	打电话给阿敏	o o o o b-name i-name
+flight@query	明天去成都的航班有几趟	b-startdate_date i-startdate_date o b-endloc_city i-endloc_city o o o o o o
+cookbook@query	炖鲢鱼怎么做？	b-dishname i-dishname i-dishname o o o o
+music@play	来一首解脱	o o o b-song i-song
+message@send	给肥老发信息	o b-name i-name o o o
+novel@query	搜索小说校园全能高手。	o o o o b-name i-name i-name i-name i-name i-name o
+tvchannel@play	帮我调到安徽卫视	o o o o b-name i-name i-name i-name
+message@send	发送短信给黄启超	o o o o o b-name i-name i-name
+map@position	北京西站在哪	b-location_poi i-location_poi i-location_poi i-location_poi o o
+cookbook@query	四川美食。	b-keyword i-keyword i-keyword i-keyword o
+video@query	现在热门的电视剧是什么	o o b-popularity i-popularity o b-category i-category i-category o o o
+video@query	魔幻电影	b-tag i-tag b-category i-category
+video@query	最新有什么热门电影	b-timedescr i-timedescr o o o b-popularity i-popularity b-category i-category
+epg@query	央视少儿频道的节目的	b-tvchannel i-tvchannel i-tvchannel i-tvchannel i-tvchannel i-tvchannel o o o o
+cookbook@query	牛肉的做法。	b-ingredient i-ingredient o o o o
+poetry@query	家，背首沁园春雪。	o o o o b-name i-name i-name i-name o
+cookbook@query	猪肉灌汤包怎么做？	b-dishname i-dishname i-dishname i-dishname i-dishname o o o o
+train@query	杭州南站到龙游的火车有哪几班	b-startloc_poi i-startloc_poi i-startloc_poi i-startloc_poi o b-endloc_area i-endloc_area o o o o o o o
+news@play	龙岩新闻	b-location_city i-location_city o o
+translation@translation	你怎么了英文怎么讲	b-content i-content i-content i-content b-target i-target o o o
+flight@query	查询4月1号从武汉到广州的航班	o o b-startdate_date i-startdate_date i-startdate_date i-startdate_date o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+news@play	么，哥来一下最新的新闻。	o o o o o o o o o o o o
+epg@query	今晚看什么电影？	b-datetime_time i-datetime_time o o o b-category i-category o
+cookbook@query	红烧狮子头怎么做	b-dishname i-dishname i-dishname i-dishname i-dishname o o o
+novel@query	你能搜到小说不？	o o o o o o o o
+stock@query	科大讯飞的股价如何	b-name i-name i-name i-name o o o o o
+novel@query	给我讲一个长篇小说。	o o o o o o o o o o
+poetry@query	你背首唐诗给我听听啊	o o o b-dynasty o o o o o o
+flight@query	青岛到广州航班	b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o
+lottery@number_query	搜索大乐透的中奖号码	o o b-name i-name i-name o o o o o
+match@query	中超比赛结果，今天呢？	b-category i-category o o o o o b-datetime_date i-datetime_date o o
+cookbook@query	怎么做饭好吃？	o o o b-dishname o o o
+epg@query	湖南卫视有什么节目	b-tvchannel i-tvchannel i-tvchannel i-tvchannel o o o o o
+app@launch	打开应用程序钱包	o o o o o o b-name i-name
+poetry@query	背诵悯农。	o o b-name i-name o
+message@sendcontacts	把上官围的电话发给戴勋	o b-name i-name i-name o o o o o b-receiver i-receiver
+video@query	胜女的代价电视剧	b-name i-name i-name i-name i-name b-category i-category i-category
+novel@query	都市言情小说何以笙箫默	b-category i-category i-category i-category o o b-name i-name i-name i-name i-name
+message@send	给刘三发短信说我今天没有空	o b-name i-name o o o o b-content i-content i-content i-content i-content i-content
+music@play	播放上海滩。	o o b-song i-song i-song o
+video@query	忍者之路	b-name i-name i-name i-name
+stock@riserate_query	宏达高科的股票跌了没有	b-name i-name i-name i-name o o o o o o o
+telephone@dial	打电话给艾背	o o o o b-name i-name
+website@open	广西新闻网	b-name i-name i-name i-name i-name
+video@query	五号特工组	b-name i-name i-name i-name i-name
+stock@query	苏泊尔股价大跌	b-name i-name i-name o o o o
+epg@query	现在哪个台在播放剧情电视剧	b-datetime_time i-datetime_time o o o o o o b-category i-category i-category i-category i-category
+cookbook@query	a排骨怎么做好吃？	o b-ingredient i-ingredient o o o o o o
+train@query	查一下南昌到南京的火车	o o o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+music@play	给我放一首最炫民族风。	o o o o o b-song i-song i-song i-song i-song o
+cookbook@query	做苹果麦片粥需要哪写材料？	o b-dishname i-dishname i-dishname i-dishname i-dishname o o o o o o o
+website@open	我要打开百度	o o o o b-name i-name
+cookbook@query	你如何做螃蟹？	o o o o b-ingredient i-ingredient o
+video@query	想唱就唱	b-name i-name i-name i-name
+translation@translation	我不在家英语怎么说	b-content i-content i-content i-content b-target i-target o o o
+music@play	来一首有点舍不得	o o o b-song i-song i-song i-song i-song
+video@query	太阳第九集	b-name i-name b-episode i-episode i-episode
+stock@query	中水渔业的股票	b-name i-name i-name i-name o o o
+cookbook@query	那烤箱做面包怎么做？	o o o o b-dishname i-dishname o o o o
+message@send	给小阳发短信	o b-name i-name o o o
+epg@query	湖南台演什么节目	b-tvchannel i-tvchannel i-tvchannel o o o o o
+website@open	宜家	b-name i-name
+video@query	查找电影	o o b-category i-category
+weather@query	你好请问一下明天广州的天气如何	o o o o o o b-datetime_date i-datetime_date b-location_city i-location_city o o o o o
+cookbook@query	豆腐花的做法。	b-dishname i-dishname i-dishname o o o o
+epg@query	chc高清电影昨天晚上的节目	b-tvchannel i-tvchannel i-tvchannel i-tvchannel i-tvchannel i-tvchannel i-tvchannel b-datetime_date i-datetime_date b-datetime_time i-datetime_time o o o
+epg@query	湖南卫视现在在播什么	b-tvchannel i-tvchannel i-tvchannel i-tvchannel b-datetime_time i-datetime_time o o o o
+cookbook@query	鸭蛋怎么腌？	b-ingredient i-ingredient o o o o
+website@open	给我打开百度网	o o o o b-name i-name o
+flight@query	帮我看一下明天去北京的飞机	o o o o o b-startdate_date i-startdate_date o b-endloc_city i-endloc_city o o o
+message@send	发信息给老婆说我不回家吃饭了	o o o o b-name i-name o b-content i-content i-content i-content i-content i-content i-content
+riddle@query	灯谜惑下。	b-category i-category o o o
+cookbook@query	凉拌海带	b-dishname i-dishname i-dishname i-dishname
+radio@launch	请帮我调频105.8南京人民广播电台音乐台	o o o o o b-code i-code i-code i-code i-code b-name i-name i-name i-name i-name i-name i-name i-name i-name i-name i-name
+app@launch	打开语音软件	o o b-name i-name o o
+stock@query	伊利股份	b-name i-name i-name i-name
+translation@translation	你去玩手机了吧用英语怎么说	b-content i-content i-content i-content i-content i-content i-content o b-target i-target o o o
+message@send	给栾佳佳发短信说回到济南了	o b-name i-name i-name o o o o b-content i-content i-content i-content i-content
+video@query	花开半夏	b-name i-name i-name i-name
+tvchannel@play	cctv6电影	b-name i-name i-name i-name i-name i-name i-name
+poetry@query	天王盖地虎的下一句是什么？	b-keyword i-keyword i-keyword i-keyword i-keyword o b-queryfield i-queryfield i-queryfield o o o o
+poetry@query	阿妈，来一首白居易的诗。	o o o o o o b-author i-author i-author o o o
+tvchannel@play	找湖南卫视	o b-name i-name i-name i-name
+flight@query	从厦门到昆明的飞机	o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+music@play	来一首隐形的翅膀。	o o o b-song i-song i-song i-song i-song o
+app@launch	进入设置菜单	o o b-name i-name o o
+website@open	请打开人人网	o o o b-name i-name i-name
+music@play	我想听春天里这首歌	o o o b-song i-song i-song o o o
+cookbook@query	腐乳肉怎么做？	b-dishname i-dishname i-dishname o o o o
+health@query	咳嗽怎么办	b-keyword i-keyword o o o
+tvchannel@play	江苏教育台	b-name i-name i-name i-name i-name
+telephone@dial	打电话	o o o
+cookbook@query	姐你红烧肉怎么做呀	o o b-dishname i-dishname i-dishname o o o o
+riddle@query	不是我是说我给你猜个谜语吧！	o o o o o o o o o o b-category i-category o o
+cookbook@query	红烧鱼怎么烧啊？	b-dishname i-dishname i-dishname o o o o o
+website@open	索尼爱立信官网	b-name i-name i-name i-name i-name o o
+radio@launch	请帮我调频89.7上虞人民广播电台	o o o o o b-code i-code i-code i-code b-name i-name i-name i-name i-name i-name i-name i-name
+cinemas@query	最近有什么好电影吗？	o o o o o o o o o o
+cookbook@query	做红烧鱼的步骤。	o b-dishname i-dishname i-dishname o o o o
+map@route	到安徽芜湖怎么走	o b-endloc_province i-endloc_province b-endloc_city i-endloc_city o o o
+map@route	怎么去泉城广场	o o o b-endloc_poi i-endloc_poi i-endloc_poi i-endloc_poi
+poetry@query	背一下春晓孟浩然。	o o o b-name i-name b-author i-author i-author o
+bus@query	查询许昌到中山的汽车。	o o b-src i-src o b-dest i-dest o o o o
+train@query	明天南京到徐州的火车	b-startdate_date i-startdate_date b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+stock@query	帮我查一下江西铜业股票	o o o o o b-name i-name i-name i-name o o
+cookbook@query	干锅香辣虾	b-dishname i-dishname i-dishname i-dishname i-dishname
+tvchannel@play	cctv7军事农业	b-name i-name i-name i-name i-name i-name i-name i-name i-name
+message@send	发短信方钰玲	o o o b-name i-name i-name
+cookbook@query	酸辣藕丁的做法。	b-dishname i-dishname i-dishname i-dishname o o o o
+map@position	广东省英德在哪里	b-location_province i-location_province i-location_province b-location_area i-location_area o o o
+video@query	狄仁杰之通天帝国视频	b-name i-name i-name i-name i-name i-name i-name i-name o o
+app@launch	camera360	b-name i-name i-name i-name i-name i-name i-name i-name i-name
+stock@query	亚洲能源物流股票	b-name i-name i-name i-name i-name i-name o o
+flight@query	帮我查一下广州到长沙的航班	o o o o o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+train@query	从长沙到北京的列车	o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+poetry@query	朗诵一首李白的诗词。	o o o o b-author i-author o o o o
+email@reply	替我答复这条邮件	o o o o o o o o
+message@send	给张金波发短消息今天中午一起吃饭	o b-name i-name i-name o o o o b-content i-content i-content i-content i-content i-content i-content i-content
+translation@translation	茶用英语怎么说呀	b-content o b-target i-target o o o o
+message@send	发信息给熊伟	o o o o b-name i-name
+cookbook@query	臭豆腐汤怎么烧？	b-dishname i-dishname i-dishname i-dishname o o o o
+translation@translation	翻译爸爸	o o b-content i-content
+cookbook@query	糯米肉怎么做？	b-dishname i-dishname i-dishname o o o o
+tvchannel@play	北京财经	b-name i-name i-name i-name
+train@query	帮我查一下临海到上海的火车	o o o o o b-startloc_area i-startloc_area o b-endloc_city i-endloc_city o o o
+poetry@query	搜搜一首毛泽东的诗。	o o o o b-author i-author i-author o o o
+flight@query	明天去纽约的航班。	b-startdate_date i-startdate_date o b-endloc_city i-endloc_city o o o o
+epg@query	浙江高清台的节目单	b-tvchannel i-tvchannel i-tvchannel i-tvchannel i-tvchannel o o o o
+message@send	给查乐发短信	o b-name i-name o o o
+match@query	播放，青岛中能的赛程。	o o o b-name i-name i-name i-name o o o o
+flight@query	上海去武汉的航班	b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+epg@query	广西电视台现在播放什么节目？	b-tvchannel i-tvchannel i-tvchannel i-tvchannel i-tvchannel b-datetime_time i-datetime_time o o o o o o o
+tvchannel@play	湖北电视台高清	b-name i-name i-name i-name i-name b-resolution i-resolution
+cookbook@query	送黄炒鸡蛋怎么做？	o o b-dishname i-dishname i-dishname o o o o
+train@query	杭州到北京的火车班次	b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o o o
+video@query	我想要看很火的电影	o o o o o b-popularity o b-category i-category
+novel@query	陈忠实的爱情小说《白鹿原》	b-author i-author i-author o b-category i-category o o o b-name i-name i-name o
+video@query	智慧树	b-name i-name i-name
+video@query	那金花和她的女婿	b-name i-name i-name i-name i-name i-name i-name i-name
+novel@query	我要看末世进化小说	o o o b-category i-category i-category i-category o o
+cookbook@query	蒸鱼。	b-dishname i-dishname o
+map@route	我去杨家坪该怎么走	o o b-endloc_poi i-endloc_poi i-endloc_poi o o o o
+epg@query	中央四频道火箭兜风	b-tvchannel i-tvchannel i-tvchannel i-tvchannel i-tvchannel b-name i-name i-name i-name
+news@play	我要点新闻。	o o o o o o
+cookbook@query	红烧肉怎么煮啊	b-dishname i-dishname i-dishname o o o o
+bus@query	宁波到岳阳的汽车。	b-src i-src o b-dest i-dest o o o o
+cookbook@query	红烧肉怎么做？嗯？	b-dishname i-dishname i-dishname o o o o o o
+tvchannel@play	甘肃台	b-name i-name i-name
+epg@query	金鹰卡通今天晚上放什么节目？	b-tvchannel i-tvchannel i-tvchannel i-tvchannel b-datetime_date i-datetime_date b-datetime_time i-datetime_time o o o o o o
+video@query	封神榜	b-name i-name i-name
+message@send	呃发信息给周玉豪	o o o o o b-name i-name i-name
+cinemas@query	最近在播什么电影？	o o o o o o o o o
+email@reply	我想答复这个邮件	o o o o o o o o
+cookbook@query	花格等蛋的做法。	o o o b-ingredient o o o o
+tvchannel@play	帮我调转到风云音乐频道	o o o o o b-name i-name i-name i-name i-name i-name
+cookbook@query	小军儿炖土豆该怎么做？	o o o b-dishname i-dishname i-dishname o o o o o
+cookbook@query	土豆饼怎么做啊？	b-dishname i-dishname i-dishname o o o o o
+telephone@dial	打电话给my god	o o o o b-name i-name i-name i-name i-name i-name
+translation@translation	你叫什么名字翻译一下	b-content i-content i-content i-content i-content i-content o o o o
+video@query	我想看变形金刚哦	o o o b-name i-name i-name i-name o
+cookbook@query	那做红烧鱼需要哪些材料啊？	o o b-dishname i-dishname i-dishname o o o o o o o o
+poetry@query	诗词满江红。	o o b-name i-name i-name o
+poetry@query	蒋捷的宋词	b-author i-author o b-dynasty o
+poetry@query	古诗长恨歌。	o o b-name i-name i-name o
+video@query	武间道	b-name i-name i-name
+match@query	中超赛事预告，啊！	b-category i-category o o b-type i-type o o o
+stock@closeprice_query	腾讯股票昨日收盘价	b-name i-name o o b-yesterday i-yesterday o o o
+video@query	2012年美国公告牌音乐大奖颁奖礼	b-datetime_date i-datetime_date i-datetime_date i-datetime_date i-datetime_date b-name i-name i-name i-name i-name i-name i-name i-name i-name i-name i-name i-name
+stock@query	平安保险的股票价格	b-name i-name i-name i-name o o o o o
+cookbook@query	黑米红豆粥的做法。	b-dishname i-dishname i-dishname i-dishname i-dishname o o o o
+epg@query	搜一下cctv74月15号播出新编辑部的故事呢	o o o b-tvchannel i-tvchannel i-tvchannel i-tvchannel i-tvchannel b-datetime_date i-datetime_date i-datetime_date i-datetime_date i-datetime_date o o b-name i-name i-name i-name i-name i-name i-name o
+news@play	我想听听钓鱼岛的新闻。	o o o o b-keyword i-keyword i-keyword o o o o
+music@play	来点歌听听	o o o o o
+message@send	给严巧发短信	o b-name i-name o o o
+cookbook@query	然后等你杀猪菜怎么做？	o o o o b-dishname i-dishname i-dishname o o o o
+cookbook@query	椒盐排骨怎么做？你？	b-dishname i-dishname i-dishname i-dishname o o o o o o
+lottery@number_query	搜索25选5的获奖号码	o o b-name i-name i-name i-name o o o o o
+app@query	搜索米聊	o o b-name i-name
+translation@translation	腿英文怎么说	b-content b-target i-target o o o
+train@query	到北京的火车班次	o b-endloc_city i-endloc_city o o o o o
+map@route	带我去丹阳市眼镜市场	o o o b-endloc_area i-endloc_area o b-endloc_poi i-endloc_poi i-endloc_poi i-endloc_poi
+stock@query	科大讯飞昨日成交价	b-name i-name i-name i-name b-yesterday i-yesterday o o o
+poetry@query	火气冲天，下一句是什么？	b-keyword i-keyword i-keyword i-keyword o b-queryfield i-queryfield i-queryfield o o o o
+cookbook@query	石螺怎么煮	b-ingredient i-ingredient o o o
+tvchannel@play	宁波一台	b-name i-name i-name i-name
+video@query	热血动漫	b-tag i-tag b-category i-category
+cookbook@query	煲鸡汤。	b-dishname i-dishname i-dishname o
+cookbook@query	说话，给我搜一下做苹果麦片粥是怎么做啊？	o o o o o o o o o b-dishname i-dishname i-dishname i-dishname i-dishname o o o o o o
+lottery@number_query	上一期15选5的中奖号码是多少？	b-relissue i-relissue i-relissue b-name i-name i-name i-name o o o o o o o o o
+riddle@query	来个字谜我猜一下。	o o b-category i-category o o o o o
+map@position	沿途有没有加油站	o o o o o b-location_poi i-location_poi i-location_poi
+app@launch	开启通讯录	o o b-name i-name i-name
+telephone@dial	打电话给陈正成	o o o o b-name i-name i-name
+cookbook@query	怎样给宝宝做胡萝卜泥。	o o o o o o b-dishname i-dishname i-dishname i-dishname o
+map@position	查询合肥市植物园的位置	o o b-location_poi i-location_poi i-location_poi i-location_poi i-location_poi i-location_poi o o o
+flight@query	十月四号从广州到北京的飞机票多少钱	b-startdate_date i-startdate_date i-startdate_date i-startdate_date o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o o o o o
+stock@query	上海能源这支股票怎么样	b-name i-name i-name i-name o o o o o o o
+stock@query	搜索中国移动的股市行情	o o b-name i-name i-name i-name o o o o o
+train@query	查一下上海到苏州的火车票	o o o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o o
+news@play	搜索娱乐新闻。	o o b-category i-category o o o
+flight@query	查一下明天青岛飞往上海的飞机都有哪一些都是几点的	o o o b-startdate_date i-startdate_date b-startloc_city i-startloc_city o o b-endloc_city i-endloc_city o o o o o o o o o o o o o
+lottery@number_query	帮我查一下今天开奖的15选5	o o o o o b-datetime_date i-datetime_date o o o b-name i-name i-name i-name
+flight@query	去重庆的机票多少钱。	o b-endloc_city i-endloc_city o o o o o o o
+health@query	发烧。	b-keyword i-keyword o
+flight@query	帮我订一张杭州到上海的机票	o o o o o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+website@open	打开网页猫扑	o o o o b-name i-name
+stock@query	查下银星能源股票	o o b-name i-name i-name i-name o o
+cookbook@query	胡萝卜怎么炒好吃？	b-ingredient i-ingredient i-ingredient o o o o o o
+cookbook@query	披萨的做法	b-dishname i-dishname o o o
+cookbook@query	西红柿炒蛋怎么煮？	b-dishname i-dishname i-dishname i-dishname i-dishname o o o o
+poetry@query	你给我背一首白居易的诗。	o o o o o o b-author i-author i-author o o o
+poetry@query	来首苏轼的词。	o o b-author i-author o o o
+poetry@query	来首宋词。	o o b-dynasty o o
+poetry@query	来首李白的诗集。	o o b-author i-author o o o o
+cookbook@query	酱油汁的做法。	b-ingredient i-ingredient i-ingredient o o o o
+radio@launch	帮我调频92.4中国国际广播电台行不行？	o o o o b-code i-code i-code i-code b-name i-name i-name i-name i-name i-name i-name i-name o o o o
+news@play	盘锦新闻。	b-location_city i-location_city o o o
+cinemas@query	最新的热门电影是什么呀？	o o o o o o o o o o o o
+video@query	美国电影少年派的奇幻漂流	b-area i-area b-category i-category b-name i-name i-name i-name i-name i-name i-name i-name
+cookbook@query	白灼基尾虾的做法。	b-dishname i-dishname i-dishname i-dishname i-dishname o o o o
+train@query	北京到镇江的火车	b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+riddle@query	讲个猜谜语的。	o o o b-category i-category o o
+stock@riserate_query	中国银行是跌了还是涨了	b-name i-name i-name i-name o o o o o o o
+poetry@query	给我来首唐诗三百首。	o o o o b-dynasty o o o o o
+novel@query	你再给我推荐几本书	o o o o o o o o o
+message@send	发信息给苏建江	o o o o b-name i-name i-name
+map@route	导航到望江西路上去	o o o b-endloc_poi i-endloc_poi i-endloc_poi i-endloc_poi o o
+news@play	占田你给我放一下最近的新闻。	o o o o o o o o b-datetime_date i-datetime_date o o o o
+cookbook@query	刘林面怎么做啊？	o o b-ingredient o o o o o
+message@send	给梁辉坚发短信	o b-name i-name i-name o o o
+train@query	去烟台的火车	o b-endloc_city i-endloc_city o o o
+video@query	老版红楼梦	o o b-name i-name i-name
+poetry@query	来一首李煜的词。	o o o b-author i-author o o o
+cookbook@query	怎么做炸鸡	o o o b-dishname i-dishname
+cookbook@query	小鸡炖蘑菇的做法爸	b-dishname i-dishname i-dishname i-dishname i-dishname o o o o
+cookbook@query	糖醋排骨怎么做呢	b-dishname i-dishname i-dishname i-dishname o o o o
+health@query	甲亢怎么办？	b-keyword i-keyword o o o o
+flight@query	给我定一张株洲到深圳的机票	o o o o o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+stock@query	查寻上海能源的股票	o o b-name i-name i-name i-name o o o
+video@query	知青	b-name i-name
+cookbook@query	请帮我找一下酸菜鱼的做法	o o o o o o b-dishname i-dishname i-dishname o o o
+app@launch	公交查询	b-name i-name i-name i-name
+poetry@query	人死原知万事空下一句是什么？	b-keyword i-keyword i-keyword i-keyword i-keyword i-keyword i-keyword b-queryfield i-queryfield i-queryfield o o o o
+cookbook@query	请问酸辣土豆丝是怎么炒的	o o b-dishname i-dishname i-dishname i-dishname i-dishname o o o o o
+health@query	宫外孕怎么办？	b-keyword i-keyword i-keyword o o o o
+video@query	一个鬼子都不留	b-name i-name i-name i-name i-name i-name i-name
+video@query	我的爱金枝玉叶	b-name i-name i-name i-name i-name i-name i-name
+poetry@query	搜索岳飞的诗满江红。	o o b-author i-author o o b-name i-name i-name o
+video@query	情景剧电视剧	b-tag i-tag o b-category i-category i-category
+cookbook@query	拌面该怎么做？	b-dishname i-dishname o o o o o
+bus@query	从东莞去北海的汽车。	o b-src i-src o b-dest i-dest o o o o
+music@play	歌曲白天不懂夜的黑	o o b-song i-song i-song i-song i-song i-song i-song
+health@query	如何治疗感冒	o o o o b-keyword i-keyword
+translation@translation	我记住了用英文怎么讲	b-content i-content i-content i-content o b-target i-target o o o
+email@send	发邮件	o o o
+cookbook@query	炖肉	b-dishname i-dishname
+message@send	发送短信给老婆我在三号楼三零幺刚才那个教室关门了	o o o o o b-name i-name b-content i-content i-content i-content i-content i-content i-content i-content i-content i-content i-content i-content i-content i-content i-content i-content i-content
+epg@query	什么时候有西游记呢？	o o o o o b-name i-name i-name o o
+novel@query	赶紧推荐一部小说。	o o o o o o o o o
+telephone@dial	打电话给张志国	o o o o b-name i-name i-name
+health@query	破伤风该怎么处理	b-keyword i-keyword i-keyword o o o o o
+match@query	中超赛事预告吗？	b-category i-category o o o o o o
+app@launch	打开汽车之家	o o b-name i-name i-name i-name
+translation@translation	我不知道的英文怎么说	b-content i-content i-content i-content o b-target i-target o o o
+news@play	报点新闻给我听。	o o o o o o o o
+train@query	帮我在百度里搜一下东莞到北京的火车	o o o o o o o o o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+app@launch	给我打开一下qq	o o o o o o b-name i-name
+music@play	给我来一首，相见恨晚的音乐。	o o o o o o b-song i-song i-song i-song o o o o
+cookbook@query	怎么弄红烧肉哦？	o o o b-dishname i-dishname i-dishname o o
+epg@query	中央三今天有什么节目	b-tvchannel i-tvchannel i-tvchannel b-datetime_date i-datetime_date o o o o o
+riddle@query	给我打个谜语，啊！	o o o o b-category i-category o o o
+video@query	来点张艺谋出演的节目	o o b-artist i-artist i-artist b-artistrole i-artistrole o b-category i-category
+translation@translation	很高兴见到你英文怎么讲	b-content i-content i-content i-content i-content i-content b-target i-target o o o
+message@send	发信息给学超	o o o o b-name i-name
+stock@query	苹果公司股票每股多少钱啊	b-name i-name i-name i-name o o o o o o o o
+email@create	我想写一个邮件	o o o o o o o
+epg@query	哪些台在放电影	o o o o o b-category i-category
+video@query	我想看电影超人	o o o b-category i-category b-name i-name
+cookbook@query	鸡爪怎么炒？	b-ingredient i-ingredient o o o o
+flight@query	厦门到上海的机票	b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+music@play	来首青花瓷	o o b-song i-song i-song
+cookbook@query	我说吃飞蟹，怎么做？	o o o b-ingredient i-ingredient o o o o o
+cookbook@query	鱼肉怎么做？	b-ingredient i-ingredient o o o o
+message@send	给李占峰发短信你现在在做什么	o b-name i-name i-name o o o b-content i-content i-content i-content i-content i-content i-content
+translation@translation	晚安的英语	b-content i-content o b-target i-target
+message@send	发短信给张全三移动的号码我今天请他吃法	o o o o b-name i-name i-name b-teleoperator i-teleoperator o o o b-content i-content i-content i-content i-content i-content i-content
+poetry@query	白居易的诗词。	b-author i-author i-author o o o o
+video@query	正者无敌	b-name i-name i-name i-name
+translation@translation	晚上好用英语怎么说	b-content i-content i-content o b-target i-target o o o
+poetry@query	来首唐诗小池	o o b-dynasty o b-name i-name
+contacts@create	新建联系人18622625490	o o o o o b-code i-code i-code i-code i-code i-code i-code i-code i-code i-code i-code
+website@open	访问京东商城的网页	o o b-name i-name o o o o o
+cookbook@query	豆豉鲮鱼油麦菜	b-dishname i-dishname i-dishname i-dishname i-dishname i-dishname i-dishname
+video@query	穷孩子富孩子	b-name i-name i-name i-name i-name i-name
+cookbook@query	鱼香肉丝肉怎么做？	b-dishname i-dishname i-dishname i-dishname o o o o o
+train@query	帮我查一下宁波到郑州的火车	o o o o o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+app@launch	打开qq同步助手	o o b-name i-name i-name i-name i-name i-name
+cookbook@query	红烧芋头做法。	b-dishname i-dishname i-dishname i-dishname o o o
+video@query	刘诗诗主演过的电影	b-artist i-artist i-artist b-artistrole i-artistrole o o b-category i-category
+message@sendcontacts	把张三的电话发给李四	o b-name i-name o o o o o b-receiver i-receiver
+music@search	帮我找一首我的好兄弟	o o o o o o o b-song i-song i-song
+news@play	今日头条新闻。	b-media i-media i-media i-media o o o
+poetry@query	给我朗诵一下岳飞的满江红。	o o o o o o b-author i-author o b-name i-name i-name o
+bus@query	济南去聊城的汽车。	b-src i-src o b-dest i-dest o o o o
+telephone@dial	给小鱼打电话	o b-name i-name o o o
+video@query	播放非诚勿扰	o o b-name i-name i-name i-name
+health@query	颈椎病用什么药物治疗？	b-keyword i-keyword i-keyword o o o o o o o o
+poetry@default	来一首七言绝句。	o o o o o o o o
+video@query	女人的颜色六十九集	b-name i-name i-name i-name i-name b-episode i-episode i-episode i-episode
+map@position	搜索凤凰古城位置	o o b-location_poi i-location_poi i-location_poi i-location_poi o o
+poetry@query	尽在不言中下一句是什么？	b-keyword i-keyword i-keyword i-keyword i-keyword b-queryfield i-queryfield i-queryfield o o o o
+map@route	到公园怎么走	o b-endloc_poi i-endloc_poi o o o
+translation@translation	虾的英文怎么说	b-content o b-target i-target o o o
+translation@translation	小老虎用英语怎么讲	b-content i-content i-content o b-target i-target o o o
+poetry@query	造化钟神秀的下一句是什么？	b-keyword i-keyword i-keyword i-keyword i-keyword o b-queryfield i-queryfield i-queryfield o o o o
+cookbook@query	酱茄条做法。	b-dishname i-dishname i-dishname o o o
+news@play	零七播报新闻。	o o o o o o o
+telephone@dial	打电话给卢静	o o o o b-name i-name
+weather@query	北京下雨了吗你个蠢蛋	b-location_city i-location_city o b-subfocus o o o o o o
+riddle@query	猜个谜语哦。	o o b-category i-category o o
+train@query	温州到瑞昌的火车	b-startloc_city i-startloc_city o b-endloc_area i-endloc_area o o o
+map@route	从我这里去芙蓉区政府怎么去	o o o o o b-endloc_poi i-endloc_poi i-endloc_poi i-endloc_poi i-endloc_poi o o o
+tvchannel@play	cctv农业	b-name i-name i-name i-name i-name i-name
+cookbook@query	桂林米粉，哦。	b-dishname i-dishname i-dishname i-dishname o o o
+cookbook@query	哈哈，吃了水煮鱼怎么做？	o o o o o b-dishname i-dishname i-dishname o o o o
+music@play	喂喂那个我说想听音乐呢	o o o o o o o o o o o
+message@sendcontacts	把李会计的电话发给小江	o b-name i-name i-name o o o o o b-receiver i-receiver
+message@send	给王帅发个短信说他让他起来尿尿	o b-name i-name o o o o o o b-content i-content i-content i-content i-content i-content
+news@play	哦，听新闻。	o o o o o o
+train@query	查一下吉安至武汉的火车	o o o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+telephone@dial	打电话陈雪莉	o o o b-name i-name i-name
+message@send	我要给陈永信息	o o o b-name i-name o o
+telephone@dial	打电话温正军	o o o b-name i-name i-name
+telephone@dial	打电话给陈永聪	o o o o b-name i-name i-name
+translation@translation	翻译这个多少钱	o o b-content i-content i-content i-content i-content
+telephone@dial	呼叫老公	o o b-name i-name
+music@play	你不来一首涛声依旧，那你。	o o o o o b-song i-song i-song i-song o o o o
+app@launch	打开系统软件清理	o o b-name i-name i-name i-name i-name i-name
+news@play	最近有什么热门新闻了。	b-datetime_date i-datetime_date o o o b-category i-category o o o o
+tvchannel@play	我要看中央五台	o o o b-name i-name i-name i-name
+flight@query	查寻合肥到北京的航班	o o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+app@launch	打开熊猫看书	o o b-name i-name i-name i-name
+app@launch	把uc打开啊	o b-name i-name o o o
+stock@query	泰山石油股票	b-name i-name i-name i-name o o
+poetry@query	来一首毛泽东的词。	o o o b-author i-author i-author o o o
+music@play	我想听11年，这首歌哦。	o o o b-song i-song i-song o o o o o o
+stock@riserate_query	代码000800的股票涨幅是多少	o o b-code i-code i-code i-code i-code i-code o o o o o o o o
+flight@query	明天从桂林到杭州的航班	b-startdate_date i-startdate_date o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+video@query	韩国电视连续剧老大	b-area i-area b-category i-category i-category i-category i-category b-name i-name
+poetry@query	我想听首唐诗。	o o o o b-dynasty o o
+email@create	给我写一个新邮件	o o o o o o o o
+bus@query	帮我查一下赣州到厦门的汽车。	o o o o o b-src i-src o b-dest i-dest o o o o
+cookbook@query	坐宫保鸡丁需要哪些材料？	o b-dishname i-dishname i-dishname i-dishname o o o o o o o
+cookbook@query	土豆炒肉丝的做法	b-dishname i-dishname i-dishname i-dishname i-dishname o o o
+poetry@query	我给我念一首李白的诗吧？	o o o o o o b-author i-author o o o o
+novel@query	最近好看的小说	o o b-popularity i-popularity o o o
+cookbook@query	打豆浆剩下的豆渣怎样做，好吃？	o o o o o o b-ingredient i-ingredient o o o o o o o
+epg@query	电影频道今天放什么	b-tvchannel i-tvchannel i-tvchannel i-tvchannel b-datetime_date i-datetime_date o o o
+novel@query	情债	b-name i-name
+tvchannel@play	北京二	b-name i-name i-name
+message@sendcontacts	把王世怀的号码发给乔丽君	o b-name i-name i-name o o o o o b-receiver i-receiver i-receiver
+epg@query	安徽电视台12月18号晚上10:10的电视剧	b-tvchannel i-tvchannel i-tvchannel i-tvchannel i-tvchannel o b-datetime_date i-datetime_date i-datetime_date i-datetime_date i-datetime_date b-datetime_time i-datetime_time i-datetime_time i-datetime_time i-datetime_time i-datetime_time i-datetime_time o b-category i-category i-category
+stock@query	查询海螺水泥的股票	o o b-name i-name i-name i-name o o o
+translation@translation	五用英语怎么说	b-content o b-target i-target o o o
+video@query	金瓶梅	b-name i-name i-name
+translation@translation	我想出去旅游英文怎么说	b-content i-content i-content i-content i-content i-content b-target i-target o o o
+flight@query	去伦敦的航班	o b-endloc_city i-endloc_city o o o
+news@play	查一下今天早上的新闻。	o o o b-datetime_date i-datetime_date b-datetime_time i-datetime_time o o o o
+cookbook@query	用电压力锅怎么蒸米粉肉。	o o b-utensil i-utensil i-utensil o o b-dishname i-dishname i-dishname i-dishname o
+flight@query	二十五日去深圳的航班	b-startdate_date i-startdate_date i-startdate_date i-startdate_date o b-endloc_city i-endloc_city o o o
+bus@query	上海到合肥可以到哪坐车	b-src i-src o b-dest i-dest o o o o o o
+music@play	播放老婆最大。	o o b-song i-song i-song i-song o
+video@query	播七龙珠	o b-name i-name i-name
+health@query	包皮包茎	b-keyword i-keyword i-keyword i-keyword
+video@query	搜索国外大片	o o b-area i-area b-category i-category
+website@open	幻剑书盟	b-name i-name i-name i-name
+video@query	神兵小将	b-name i-name i-name i-name
+music@play	我想听笨这首歌。	o o o b-song o o o o
+cookbook@query	不懂饭的做法。	o o b-dishname o o o o
+message@send	给原波发短信	o b-name i-name o o o
+tvchannel@play	卡酷少儿频道	b-name i-name i-name i-name i-name i-name
+translation@translation	我要买电脑的英语怎么说	b-content i-content i-content i-content i-content o b-target i-target o o o
+match@query	2013年中国男足，主要赛程。	b-datetime_date i-datetime_date i-datetime_date i-datetime_date i-datetime_date b-category i-category i-category i-category o o o o o o
+flight@query	从威海到苏州的飞机	o b-startloc_city i-startloc_city o b-endloc_city i-endloc_city o o o
+map@position	美国大使馆在哪	b-location_poi i-location_poi i-location_poi i-location_poi i-location_poi o o
+riddle@query	也来个灯谜吗？	o o o b-category i-category o o
+epg@query	世界地理的节目单	b-tvchannel i-tvchannel i-tvchannel i-tvchannel o o o o
+cookbook@query	小猪哨糖醋排骨的做法。	o o o b-dishname i-dishname i-dishname i-dishname o o o o
+health@query	贫血怎么治？	b-keyword i-keyword o o o o
+stock@query	保利地产的股票	b-name i-name i-name i-name o o o
+novel@query	我要看军事武侠小说	o o o b-category i-category i-category i-category o o
+health@query	糖尿病注意什么？	b-keyword i-keyword i-keyword o o o o o
+website@open	打开苹果公司的官方网站	o o b-name i-name i-name i-name i-name i-name i-name i-name i-name
+epg@query	今天晚上天津卫视放什么年岁月	b-datetime_date i-datetime_date b-datetime_time i-datetime_time b-tvchannel i-tvchannel i-tvchannel i-tvchannel o o o o o o
+website@open	打开浦发银行	o o b-name i-name i-name i-name
+match@query	北京国安的赛程。	b-name i-name i-name i-name o o o o
+cinemas@query	我要看热门电影。	o o o o o o o o
+news@play	姨，最近有什么新闻。	o o b-datetime_date i-datetime_date o o o o o o
+news@play	讲点新闻	o o o o
+cookbook@query	你真笨，是四喜丸子怎么做了。	o o o o o b-dishname i-dishname i-dishname i-dishname o o o o o
