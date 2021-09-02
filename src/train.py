@@ -3,12 +3,12 @@ import torch
 import os
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--bert_path', help='config file', default='/home/data/tmp/bert-base-chinese')
-parser.add_argument('--save_path', help='path to save checkpoints', default='/home/data/tmp/NLP_Course/Joint_NLU/train')
-parser.add_argument('--train_file', help='training data', default='/home/data/tmp/NLP_Course/Joint_NLU/data/train.tsv')
-parser.add_argument('--valid_file', help='valid data', default='/home/data/tmp/NLP_Course/Joint_NLU/data/test.tsv')
-parser.add_argument('--intent_label_vocab', help='training file', default='/home/data/tmp/NLP_Course/Joint_NLU/data/cls_vocab')
-parser.add_argument('--slot_label_vocab', help='training file', default='/home/data/tmp/NLP_Course/Joint_NLU/data/slot_vocab')
+parser.add_argument('--bert_path', help='config file', default='../bert')
+parser.add_argument('--save_path', help='path to save checkpoints', default='../train')
+parser.add_argument('--train_file', help='training data', default='../data/train.tsv')
+parser.add_argument('--valid_file', help='valid data', default='../data/test.tsv')
+parser.add_argument('--intent_label_vocab', help='training file', default='../data/cls_vocab')
+parser.add_argument('--slot_label_vocab', help='training file', default='../data/slot_vocab')
 
 parser.add_argument("--local_rank", help='used for distributed training', type=int, default=-1)
 parser.add_argument('--lr', type=float, default=8e-6)
@@ -21,7 +21,7 @@ parser.add_argument('--max_length', type=int, default=90)
 parser.add_argument('--seed', type=int, default=123)
 parser.add_argument('--n_jobs', type=int, default=1, help='num of workers to process data')
 
-parser.add_argument('--gpu', help='which gpu to use', type=str, default='3')
+parser.add_argument('--gpu', help='which gpu to use', type=str, default='0')
 
 args = parser.parse_args()
 
@@ -39,7 +39,7 @@ train_path = os.path.join(args.save_path, 'train')
 log_path = os.path.join(args.save_path, 'log')
 
 def save_func(epoch, device):
-    filename = utils.get_ckpt_filename('model', epoch)
+    filename = utils.get_ckpt_filename('model', 1)
     torch.save(trainer.state_dict(), os.path.join(train_path, filename))
 
 try:
@@ -66,7 +66,8 @@ try:
         torch.distributed.init_process_group(backend='nccl', init_method='env://')
         torch.manual_seed(args.seed)
     else:
-        device = torch.device("cuda", 0)
+        # device = torch.device("cuda", 0)
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     tokz = BertTokenizer.from_pretrained(args.bert_path)
     _, intent2index, _ = utils.load_vocab(args.intent_label_vocab)
     _, slot2index, _ = utils.load_vocab(args.slot_label_vocab)

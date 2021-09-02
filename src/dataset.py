@@ -69,10 +69,10 @@ if __name__ == '__main__':
     cls_vocab_file = '../data/cls_vocab'
     slot_vocab_file = '../data/slot_vocab'
     with open(cls_vocab_file) as f:
-        res = [i.strip() for i in f.readlines() if len(i.strip()) != 0]
+        res = [i.strip().lower() for i in f.readlines() if len(i.strip()) != 0]
     cls_vocab = dict(zip(res, range(len(res))))
     with open(slot_vocab_file) as f:
-        res = [i.strip() for i in f.readlines() if len(i.strip()) != 0]
+        res = [i.strip().lower() for i in f.readlines() if len(i.strip()) != 0]
     slot_vocab = dict(zip(res, range(len(res))))
 
     class Logger:

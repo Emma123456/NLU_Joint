@@ -1,5 +1,6 @@
 from transformers import BertPreTrainedModel, BertModel
 from torch import nn
+from torchcrf import CRF
 
 
 class NLUModule(BertPreTrainedModel):
@@ -12,7 +13,7 @@ class NLUModule(BertPreTrainedModel):
         self.dropout = nn.Dropout(config.hidden_dropout_prob)
         self.intent_classifier = nn.Linear(config.hidden_size, config.num_intent_labels)
         self.slot_classifier = nn.Linear(config.hidden_size, config.num_slot_labels)
-
+        self.crf = CRF(num_tags=config.num_slot_labels, batch_first=True)
         self.init_weights()
 
     def forward(
@@ -25,6 +26,7 @@ class NLUModule(BertPreTrainedModel):
         inputs_embeds=None,
         output_attentions=None,
         output_hidden_states=None,
+        slot_labels=None
     ):
         r"""
         labels (:obj:`torch.LongTensor` of shape :obj:`(batch_size,)`, `optional`):
@@ -51,4 +53,9 @@ class NLUModule(BertPreTrainedModel):
         intent_logits = self.intent_classifier(pooled_output)
         slot_logits = self.slot_classifier(seq_encoding)
 
-        return intent_logits, slot_logits
+        if slot_labels is not None:
+            slot_loss = self.crf(slot_logits, slot_labels, mask=attention_mask.byte(), reduction='mean')
+            slot_loss = -1 * slot_loss  # negative log-likelihood
+            return intent_logits, slot_logits, slot_loss
+        else:
+            return intent_logits, slot_logits, None
