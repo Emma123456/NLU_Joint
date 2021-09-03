@@ -8,6 +8,7 @@ class NLUModule(BertPreTrainedModel):
         super().__init__(config)
         self.num_intent_labels = config.num_intent_labels
         self.num_slot_labels = config.num_slot_labels
+        self.use_crf = config.use_crf
 
         self.bert = BertModel(config)
         self.dropout = nn.Dropout(config.hidden_dropout_prob)
@@ -52,10 +53,9 @@ class NLUModule(BertPreTrainedModel):
         pooled_output = self.dropout(pooled_output)
         intent_logits = self.intent_classifier(pooled_output)
         slot_logits = self.slot_classifier(seq_encoding)
-
-        if slot_labels is not None:
-            slot_loss = self.crf(slot_logits, slot_labels, mask=attention_mask.byte(), reduction='mean')
-            slot_loss = -1 * slot_loss  # negative log-likelihood
-            return intent_logits, slot_logits, slot_loss
+        if self.use_crf and slot_labels is not None:
+            crf_loss = self.crf(slot_logits, slot_labels, mask=attention_mask.byte(), reduction='mean')
+            crf_loss = -1 * crf_loss  # negative log-likelihood
+            return intent_logits, slot_logits, crf_loss
         else:
             return intent_logits, slot_logits, None

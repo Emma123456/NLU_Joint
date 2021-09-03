@@ -18,7 +18,7 @@ parser.add_argument('--n_epochs', type=int, default=30)
 parser.add_argument('--max_length', type=int, default=90)
 parser.add_argument('--seed', type=int, default=123)
 parser.add_argument('--n_jobs', type=int, default=1, help='num of workers to process data')
-
+parser.add_argument("--use_crf", action="store_true", help="Whether to use CRF", default=True)
 parser.add_argument('--gpu', help='which gpu to use', type=str, default='0')
 
 args = parser.parse_args()
@@ -34,21 +34,20 @@ import utils
 
 
 train_path = os.path.join(args.save_path, 'train')
-model_path = os.path.join(train_path, 'model.ckpt')
+model_path = os.path.join(train_path, 'model_crf.ckpt')
 max_lengths = args.max_length
 tokz = BertTokenizer.from_pretrained(args.bert_path)
 _, intent2index, index2intent = utils.load_vocab(args.intent_label_vocab)
 _, slot2index, index2slot = utils.load_vocab(args.slot_label_vocab)
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-def class_pred(intent_logit, ner_logit):
+def class_pred(intent_logit):
     intent_pred = intent_logit.argmax(axis=1)
-    ner_pred = ner_logit.argmax(axis=-1)
-    return intent_pred, ner_pred
+    return intent_pred
 
 
-def string_pred(intent_logit, ner_logit, mask):
-    intent_pred, ner_pred = class_pred(intent_logit, ner_logit)
+def string_pred(intent_logit, ner_pred, mask):
+    intent_pred = class_pred(intent_logit)
     print(intent_pred)
     print(ner_pred)
     intent_pred = [index2intent[i.item()] for i in intent_pred]
@@ -82,14 +81,15 @@ def predict(text):
     bert_config = BertConfig.from_pretrained(args.bert_path)
     bert_config.num_intent_labels = len(intent2index)
     bert_config.num_slot_labels = len(slot2index)
+    bert_config.use_crf = args.use_crf
     model = NLUModule.from_pretrained(args.bert_path, config=bert_config)
     model.load_state_dict(torch.load(model_path, map_location=torch.device('cpu')))
     intent_logits, slot_logits, _ = model(input_ids, mask, token_type_ids)
 
     slot_preds = np.array(model.crf.decode(slot_logits))
-    print(slot_preds)
+    print('crf predicat ',slot_preds)
 
-    intent_pred, ner_pred = string_pred(intent_logits, slot_logits, mask)
+    intent_pred, ner_pred = string_pred(intent_logits, slot_preds, mask)
     print(intent_pred)
     print(ner_pred)
 
@@ -118,14 +118,15 @@ if __name__ == '__main__':
     for i, item in enumerate(ner_target):
         ner_target_string.append(config.ner_encoder.inverse_transform(item).tolist())
     print('真实', ner_target_string)
-    print('预测且字符串化', ner_pred)
+    print('预测且字符串化', ner_pred) 
     '''
 
     text = '酸菜粉条肉的做法'
-    text = '童子鸡的做法。'
-    text = '现在电视台在放什么节目'
-    text = '安徽电视台12月18号晚上10:10的电视剧'
-    text = '找山西卫视'
-    text = '高清电影'
+    #text = '童子鸡的做法。'
+    #text = '现在电视台在放什么节目'
+    #text = '安徽电视台12月18号晚上10:10的电视剧'
+    #text = '找山西卫视'
+    #text = '高清电影'
+    #text = '从东莞去北海的汽车'
     predict(text)
 

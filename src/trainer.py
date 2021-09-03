@@ -11,15 +11,16 @@ from tqdm import tqdm
 import numpy as np
 
 
-def count_slot_data(slot_logits, slot_labels, slot_mask):
+def count_slot_data(slot_preds, slot_labels, slot_mask):
     '''
     按行计算，有多少条数据 预测的slot与实际slot完全匹配，不计算被mask的部分
-    :param slot_logits:
+    :param slot_preds:
     :param slot_labels:
     :param slot_mask:
     :return:
     '''
-    slot_preds = torch.argmax(slot_logits, dim=-1)
+    slot_labels = slot_labels.cpu().numpy()
+    slot_mask = slot_mask.cpu().numpy()
     batch_slot_true_count = 0
     for i in range(len(slot_preds)):
         slot_pred = slot_preds[i]
@@ -45,11 +46,12 @@ def compare(slot_pred, slot_label, mask):
 
 class Trainer:
     def __init__(self, args, model, tokz, train_dataset, valid_dataset,
-                 log_dir, logger, device=torch.device('cuda'), valid_writer=None, distributed=False):
+                 log_dir, logger, device=torch.device('cuda'), valid_writer=None, distributed=False, use_crf=True):
         self.config = args
         self.device = device
         self.logger = logger
         self.log_dir = log_dir
+        self.use_crf = use_crf
         self.tokz = tokz
         self.rank = torch.distributed.get_rank() if distributed else -1
         self.train_writer = SummaryWriter(os.path.join(log_dir, 'train'))
@@ -106,15 +108,20 @@ class Trainer:
 
             batch_intent_loss = self.criterion(intent_logits, intent_labels).mean()
             slot_mask = 1 - slot_labels.eq(self.tokz.pad_token_id).float()
-            # batch_slot_loss = self.criterion(slot_logits.view(-1, slot_logits.shape[-1]), slot_labels.view(-1)).mean()
-            # batch_slot_loss = (batch_slot_loss * slot_mask.view(-1)).sum() / slot_mask.sum()
-            batch_slot_loss = crf_loss
+            if self.use_crf:
+                batch_slot_loss = crf_loss
+            else:
+                batch_slot_loss = self.criterion(slot_logits.view(-1, slot_logits.shape[-1]), slot_labels.view(-1)).mean()
+                batch_slot_loss = (batch_slot_loss * slot_mask.view(-1)).sum() / slot_mask.sum()
             batch_loss = batch_intent_loss + batch_slot_loss # 这里加比例，对结果影响不大
+
             batch_intent_acc = (torch.argmax(intent_logits, dim=-1) == intent_labels).float().mean()
-            batch_slot_true_count = count_slot_data(slot_logits, slot_labels, slot_mask)
+            if self.use_crf:
+                slot_preds = np.array(self.model.crf.decode(slot_logits))
+                batch_slot_true_count = count_slot_data(slot_preds, slot_labels, slot_mask)
+            else:
+                batch_slot_true_count = count_slot_data(torch.argmax(slot_logits, dim=-1).cpu(), slot_labels, slot_mask)
             batch_slot_acc = batch_slot_true_count / len(slot_labels)
-            #batch_slot_acc = (torch.argmax(slot_logits, dim=-1) == slot_labels)
-            #batch_slot_acc = torch.sum(batch_slot_acc * slot_mask) / torch.sum(slot_mask)
 
             full_loss = batch_loss / self.config.batch_split
             full_loss.backward()
@@ -172,18 +179,23 @@ class Trainer:
                                                                   token_type_ids=token_type, slot_labels=slot_labels)
                 
                 batch_intent_loss = self.criterion(intent_logits, intent_labels)
-                # batch_slot_loss = self.criterion(slot_logits.view(-1, slot_logits.shape[-1]), slot_labels.view(-1))
                 slot_mask = 1 - slot_labels.eq(self.tokz.pad_token_id).float()
-                # batch_slot_loss = (batch_slot_loss * slot_mask.view(-1)).view(text.shape[0], -1).sum(dim=-1) / slot_mask.sum(dim=-1)
-                batch_slot_loss = crf_loss
+                if self.use_crf:
+                    batch_slot_loss = crf_loss
+                else:
+                    batch_slot_loss = self.criterion(slot_logits.view(-1, slot_logits.shape[-1]),
+                                                     slot_labels.view(-1)).mean()
+                    batch_slot_loss = (batch_slot_loss * slot_mask.view(-1)).sum() / slot_mask.sum()
                 
                 dev_intent_loss += batch_intent_loss.sum()
                 dev_slot_loss += batch_slot_loss.sum()
 
                 batch_intent_acc = (torch.argmax(intent_logits, dim=-1) == intent_labels).sum()
-                batch_slot_acc = count_slot_data(slot_logits, slot_labels, slot_mask)
-                #batch_slot_acc = (torch.argmax(slot_logits, dim=-1) == slot_labels)
-                #batch_slot_acc = torch.sum(batch_slot_acc * slot_mask, dim=-1) / torch.sum(slot_mask, dim=-1)
+                if self.use_crf:
+                    slot_preds = np.array(self.model.crf.decode(slot_logits))
+                    batch_slot_acc = count_slot_data(slot_preds, slot_labels, slot_mask)
+                else:
+                    batch_slot_acc = count_slot_data(torch.argmax(slot_logits, dim=-1).cpu(), slot_labels, slot_mask)
 
                 dev_intent_acc += batch_intent_acc
                 dev_slot_acc += batch_slot_acc

@@ -20,6 +20,7 @@ parser.add_argument('--n_epochs', type=int, default=30)
 parser.add_argument('--max_length', type=int, default=90)
 parser.add_argument('--seed', type=int, default=123)
 parser.add_argument('--n_jobs', type=int, default=1, help='num of workers to process data')
+parser.add_argument("--use_crf", action="store_true", help="Whether to use CRF", default=True)
 
 parser.add_argument('--gpu', help='which gpu to use', type=str, default='0')
 
@@ -37,6 +38,7 @@ from torch.nn.parallel import DistributedDataParallel
 
 train_path = os.path.join(args.save_path, 'train')
 log_path = os.path.join(args.save_path, 'log')
+
 
 def save_func(epoch, device):
     filename = utils.get_ckpt_filename('model', 1)
@@ -78,12 +80,14 @@ try:
     bert_config = BertConfig.from_pretrained(args.bert_path)
     bert_config.num_intent_labels = len(intent2index)
     bert_config.num_slot_labels = len(slot2index)
+    bert_config.use_crf = args.use_crf
     model = NLUModule.from_pretrained(args.bert_path, config=bert_config).to(device)
 
     if distributed:
         model = DistributedDataParallel(model, device_ids=[args.local_rank], output_device=args.local_rank)
 
-    trainer = Trainer(args, model, tokz, train_dataset, valid_dataset, log_path, logger, device, distributed=distributed)
+    trainer = Trainer(args, model, tokz, train_dataset, valid_dataset, log_path, logger, device, distributed=distributed,
+                      use_crf=args.use_crf)
 
     start_epoch = 0
     if args.local_rank in [-1, 0]:
